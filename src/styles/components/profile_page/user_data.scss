@@ -1,0 +1,112 @@
+.user-data {
+    display: none;
+    width: 1140px;
+    background: $main-text-light;
+    box-shadow: 9px 9px 15px hsl(0, 1%, 72%), -9px -9px 15px $white;
+    border-radius: 10px;
+    &__inner {
+        padding: 52px 64px 58px;
+    }
+    &__title {
+        width: 286px;
+        margin: 0 0 60px 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__paragraph {
+        margin: 0;
+    }
+    &__paragraph:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    &__fcs-input {
+        width: 300px;
+        padding: 8px;
+        color: rgba($main-text-dark, $alpha: 0.35);
+        outline: none;
+        background: transparent;
+        border: 1px solid rgba($main-text-dark, $alpha: 0.35);
+        transition: all 0.3s;
+    }
+    &__fcs-input:focus {
+        color: rgba($main-text-dark, $alpha: 1);
+        border: 1px solid rgba($main-text-dark, $alpha: 1);
+    }
+    &__fcs-input:not(:last-child) {
+        margin-right: 50px;
+    }
+    &__label {
+        display: inline-block;
+        width: 128px;
+        margin-right: 222px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__form-email-input {
+        width: 440px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        background: transparent;
+        border: none;
+        position: absolute;
+    }
+    &__form-password-input {
+        width: 200px;
+        height: 34px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        align-items: center;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        background: $main-text-light;
+        box-shadow: 5px 5px 10px #B9B7B7, -5px -5px 10px $white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    &__form-horizontal-line {
+        display: block;
+        width: 100%;
+        height: 0px;
+        margin-bottom: 50px;
+        border: 1px solid $main-text-dark;
+        opacity: 0.15;
+    }
+    &__submit-button {
+        width: 200px;
+        height: 40px;
+        margin-left: 353px;
+        align-items: center;
+        text-align: center;
+        background: $element-dark;
+        box-shadow: 5px 5px 10px #B9B7B7, -5px -5px 10px $white;
+        border: none;
+        border-radius: 10px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+        cursor: pointer;
+    }
+}

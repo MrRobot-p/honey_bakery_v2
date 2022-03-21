@@ -1,0 +1,61 @@
+<!-- SPRITE SVG -->
+
+<div style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <symbol id="close" viewBox="0 0 24 24" fill="#1f1f1f">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </symbol>
+            
+        </svg>
+</div>
+
+<!-- Popup -->
+
+<section class="popup">
+    <div class="popup__inner">
+        <div class="popup__left-side">
+            <img class="popup__main-img" src="../img/catalog_page/catalog-popup/1.png" alt="изображение выбранного товара" width="500" height="650">
+            <p class="popup__article">Артикул: №3875</p>
+        </div>
+        <div class="popup__right-side">
+            <div class="popup__top-content">
+                <h3 class="popup__title">Пламенная Осень</h3>
+                <p class="popup__price">289 BYN</p>
+            </div>
+            <div class="popup__parameters">
+                <div class="popup__weight">
+                    <p class="popup__weight-title">Вес</p>
+                    <p class="popup__weight-value">10 кг</p>
+
+                </div>
+                <div class="popup__biscuit">
+                    <p class="popup__biscuit-title">Бисквит</p>
+
+                    <p class="popup__biscuit-value">Шоколадный</p>
+                </div>
+                <div class="popup__filling">
+                    <p class="popup__filling-title">Начинка</p>
+
+                    <p class="popup__filling-value">Малина</p>
+                </div>
+            </div>
+            <button type="button" class="popup__add-button">
+                <svg class="popup__add-button-cart" width="20" height="20">
+                    <use xlink:href="#cart"></use> 
+                </svg>
+                <span class="popup__add-button-text">Добавить</span>
+            </button>
+            <div class="popup__description">
+                <p class="popup__description-title">Описание</p>
+                <p class="popup__description-text">Дизайн торта выполнен в современном минималистичном стиле, который передает всю красоту осени в ее сочных красках опавших листьев. Шоколадная начинка в сочитании с малиной - самое лучшее решение для передачи настроения начала осени.</p>
+            </div>
+        </div>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+            <svg class="popup__close-svg" width="36" height="36">
+                <use xlink:href="#close"></use> 
+            </svg>
+        </button>
+    </div>
+</section>
+<div class="overlay"></div>

@@ -1,0 +1,234 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.register-sidebar {
+    background: url(../img/auth_page/side1.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 46vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-sidebar__logo {
+    width: 233px;
+    height: 36px;
+    margin: auto auto 60px auto;
+}
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 54vw;
+    &__title {
+        margin: auto auto 50px auto;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__form {
+        margin: 0 auto;
+    }
+    &__nav {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto auto 30px auto;
+        &-horizontal-line {
+            width: 400px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $main-text-dark;
+            opacity: .15;
+        }
+        &-text {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+        }
+        &-link {
+            color: $brand-color;
+        }
+    }
+}
+
+.signup-form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+}
+
+.signup-form__userdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-inicials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 560px;
+    }
+    &-contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 560px;
+    }
+    &-name {
+        width: 240px;
+    }
+    &-surname {
+        width: 240px;
+    }
+    &-email {
+        width: 240px;
+    }
+    &-number {
+        width: 240px;
+    }
+    &-password {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    &-politic {
+        margin: 0 auto 40px auto;
+        &>label {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+            opacity: 0.8;
+        }
+        &>label>a {
+            color: $brand-color;
+        }
+    }
+}
+
+.signup-form__userdata-box {
+    position: relative;
+    &>input {
+        width: 100%;
+        padding: 12px 0 6px 0;
+        font-size: 16px;
+        color: $main-text-dark;
+        margin-bottom: 35px;
+        border: none;
+        border-bottom: 1px solid $main-text-dark;
+        outline: none;
+        background: transparent;
+        opacity: .4;
+    }
+    &>label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 18px;
+        color: $main-text-dark;
+        pointer-events: none;
+        transition: .5s;
+        opacity: 0.4;
+    }
+    &>input::placeholder {
+        opacity: 0;
+        transition: .3s;
+    }
+    &>input:focus::placeholder {
+        opacity: 1;
+    }
+    &>input:focus~label,
+    &>input:valid~label {
+        top: -26px;
+        left: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        opacity: 1;
+    }
+    &>input:invalid:not(:placeholder-shown)~label {
+        top: -26px;
+        left: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: red;
+        opacity: 1;
+    }
+}
+
+.signup-form__button-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 220px;
+    height: 39px;
+    background: #1F1F1F;
+    box-shadow: 5px 5px 10px #B9B7B7, -5px -5px 10px #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    color: #F0F0F3;
+    cursor: pointer;
+}
+
+.signup-form__button-svg {
+    margin-left: 18px;
+}
+
+.custom-politic+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-politic+label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: $main-text-light;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 4px 4px 10px #BAB8B8, inset -4.5px -4.5px 10px #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.custom-politic:checked+label::before {
+    background-image: url(../img/svg/checked.svg);
+    box-shadow: 4px 4px 10px #BAB8B8, -4.5px -4.5px 10px #FFFFFF;
+}

@@ -1,0 +1,78 @@
+.navigation-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 99;
+    &__logotype {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 184px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        &-item:not(:first-child):not(:last-child) {
+            margin-left: 35px;
+            display: flex;
+            align-items: center;
+        }
+        &-item:last-child {
+            margin-left: 15px;
+        }
+        &-item:nth-child(6):before {
+            content: "";
+            display: inline-block;
+            height: 10px;
+            width: 1px;
+            margin-right: 35px;
+            margin-bottom: 2px;
+            border-left: 1px solid $main-text-dark;
+            opacity: 0.5;
+        }
+        &-link {
+            color: $main-text-dark;
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 2px;
+            opacity: .5;
+            text-transform: uppercase;
+            &--active {
+                opacity: 1;
+            }
+        }
+        &-link:hover {
+            opacity: 1;
+        }
+        &-account {
+            margin-top: 2px;
+            fill: $main-text-dark;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &-cart {
+            margin-top: 2px;
+            fill: $main-text-dark;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

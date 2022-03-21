@@ -1,0 +1,55 @@
+.owner-info {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 870px;
+        margin: 0 auto 160px auto;
+    }
+    &__title {
+        width: 294px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        &-bold {
+            font-weight: 500;
+        }
+    }
+    &__description {
+        width: 300px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__img {
+        filter: drop-shadow(-9px -9px 20px #FFFFFF) drop-shadow(5px 5px 20px rgba(24, 24, 24, 0.7));
+        z-index: 11;
+    }
+    &__link {
+        position: absolute;
+        right: 206px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px $main-text-dark;
+        transform: rotate(90deg);
+        transition: all 0.8s;
+        z-index: 1;
+    }
+    &__link:hover {
+        transform: rotate(90deg) translateY(-20px) scale(1.08);
+    }
+}

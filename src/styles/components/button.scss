@@ -1,0 +1,58 @@
+.button {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: $main-text-light;
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+    margin-left: 14px;
+    transform: rotate(180deg);
+    background: url(../img/svg/arrow-button.svg) center center;
+    background-size: cover;
+}
+
+.button-dark {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: $main-text-dark;
+}
+
+.button-dark::after {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+    margin-left: 14px;
+    transform: rotate(180deg);
+    background: url(../img/svg/arrow-button-dark.svg) center center;
+    background-size: cover;
+}
+
+.button:hover::after {
+    animation: sheen 1s forwards;
+}
+
+.button-dark:hover::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: translate(10px) rotate(180deg);
+    }
+    0% {
+        transform: translateX(0px) rotate(180deg);
+    }
+}

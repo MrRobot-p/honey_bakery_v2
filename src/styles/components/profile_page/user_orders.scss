@@ -1,0 +1,174 @@
+.user-orders {
+    display: none;
+    width: 1140px;
+    background: $main-text-light;
+    box-shadow: 9px 9px 15px hsl(0, 1%, 72%), -9px -9px 15px $white;
+    border-radius: 10px;
+    &__current {
+        display: none;
+    }
+    &__all {
+        display: none;
+    }
+    &__inner {
+        padding: 52px 64px 58px;
+    }
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        width: 420px;
+        margin: 0 0 40px 0;
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+            opacity: 0.35;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &-horizontal-line {
+            display: none;
+            width: 100%;
+            height: 0px;
+            margin-top: 5px;
+            border: 1px solid $main-text-dark;
+        }
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1020px;
+        margin-bottom: 40px;
+        background: $main-text-light;
+        box-shadow: 9px 9px 15px #B9B7B7, -9px -9px 15px $white;
+        border-radius: 10px;
+        &-img-block {
+            position: relative;
+        }
+        &-img {
+            display: block;
+            border-radius: 10px 100px 100px 10px;
+        }
+        &-img-shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 266px;
+            height: 240px;
+            box-shadow: inset -6px 0px 20px rgba(51, 51, 51, 0.75);
+            border-radius: 10px 100px 100px 10px;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 700px;
+            margin: 0 20px;
+        }
+        &-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 20px 0;
+        }
+        &-title {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+        }
+        &-number {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+        }
+        &-main-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 560px;
+            margin: 10px 0 20px 0;
+        }
+        &-type {
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px 0;
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+        }
+        &-subtitle {
+            width: 90px;
+            margin: 0 30px 0 0;
+            opacity: 0.35;
+        }
+        &-vertical-line {
+            display: inline-block;
+            height: 100px;
+            width: 1px;
+            opacity: 0.15;
+            border: 1px solid $main-text-dark;
+        }
+        &-status-value {
+            color: $brand-color;
+        }
+    }
+    &__cancel-button {
+        align-self: flex-end;
+        margin: 0;
+    }
+    &__cancel-button-link {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: rgba(255, 0, 0, 0.35);
+    }
+}
+
+.orders-active .user-orders__tabs-link {
+    opacity: 1;
+}
+
+.orders-active .user-orders__tabs-horizontal-line {
+    display: block;
+}
+
+.orders-active .user-orders__current {
+    display: block;
+}
+
+.orders-active .user-orders__all {
+    display: block;
+}

@@ -1,0 +1,30 @@
+.filters {
+    margin: 60px auto;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    }
+    &__item-link {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-right: 90px;
+    }
+}
+
+.filter-checked {
+    opacity: 1;
+}

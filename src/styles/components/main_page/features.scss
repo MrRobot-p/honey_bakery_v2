@@ -1,0 +1,90 @@
+.features {
+    background-color: $element-dark;
+    &__background-crosses {
+        position: absolute;
+        left: -40px;
+        z-index: 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 126px;
+        padding-bottom: 126px;
+    }
+    &__intro {
+        margin-right: 140px;
+        z-index: 11;
+    }
+    &__intro-text {
+        margin: 0 0 48px 0;
+    }
+    &__subtitle {
+        margin: 0 0 3px 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+        opacity: 0.5;
+    }
+    &__title {
+        margin: 0 0 17px 0;
+        width: 468px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+    }
+    &__paragraph {
+        width: 378px;
+        margin: 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+        opacity: 0.5;
+    }
+    &__intro-images {
+        display: flex;
+        flex-direction: row;
+    }
+    &__intro-image:nth-child(2) {
+        margin: 80px 0 0 -80px;
+    }
+    &__fact:nth-child(1) {
+        margin-bottom: 90px;
+    }
+    &__fact-title {
+        width: 330px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+    }
+    &__fact-paragraph {
+        width: 586px;
+        margin: 20px 0 0 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 2px;
+        color: $main-text-light;
+        opacity: 0.5;
+    }
+}

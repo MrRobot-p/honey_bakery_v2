@@ -1,0 +1,188 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-sidebar {
+    background: url(../img/auth_page/side1.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 46vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-sidebar__logo {
+    width: 233px;
+    height: 36px;
+    margin: auto auto 60px auto;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 54vw;
+    &__title {
+        width: 240px;
+        text-align: center;
+        margin: auto auto 50px auto;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__form {
+        margin: 0 auto;
+    }
+    &__nav {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto auto 30px auto;
+        &-horizontal-line {
+            width: 400px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $main-text-dark;
+            opacity: .15;
+        }
+        &-text {
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            color: $main-text-dark;
+        }
+        &-link {
+            color: $brand-color;
+        }
+    }
+}
+
+.signin-form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 440px;
+}
+
+.signin-form__userdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-email {
+        width: 100%;
+    }
+    &-password {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+.signin-form__userdata-box {
+    position: relative;
+    &>input {
+        width: 100%;
+        padding: 12px 0 6px 0;
+        font-size: 16px;
+        color: $main-text-dark;
+        margin-bottom: 35px;
+        border: none;
+        border-bottom: 1px solid $main-text-dark;
+        outline: none;
+        background: transparent;
+        opacity: .4;
+    }
+    &>label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 18px;
+        color: $main-text-dark;
+        pointer-events: none;
+        transition: .5s;
+        opacity: 0.4;
+    }
+    &>input::placeholder {
+        opacity: 0;
+        transition: .3s;
+    }
+    &>input:focus::placeholder {
+        opacity: 1;
+    }
+    &>input:focus~label,
+    &>input:valid~label {
+        top: -26px;
+        left: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+        opacity: 1;
+    }
+    &>input:invalid:not(:placeholder-shown)~label {
+        top: -26px;
+        left: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: red;
+        opacity: 1;
+    }
+}
+
+.signin-form__button-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+    width: 220px;
+    height: 39px;
+    background: #1F1F1F;
+    box-shadow: 5px 5px 10px #B9B7B7, -5px -5px 10px $white;
+    border: none;
+    border-radius: 10px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    color: $main-text-light;
+    cursor: pointer;
+}
+
+.signin-form__button-svg {
+    margin: auto 0 auto 12px;
+}
+
+.password-control {
+    position: absolute;
+    top: 11px;
+    right: -5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/svg/view.svg) 0 0 no-repeat;
+    border: none;
+    opacity: .5;
+}
+
+.password-control.view {
+    background: url(../img/svg/no-view.svg) 0 0 no-repeat;
+    opacity: .8;
+}

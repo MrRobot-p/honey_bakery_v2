@@ -1,0 +1,101 @@
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    &__left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        width: 430px;
+        margin: 0 0 36px 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__information {
+        width: 571px;
+        margin: 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 2px;
+        color: rgba($main-text-dark, $alpha: 0.5);
+    }
+    &__paragraph {
+        width: 325px;
+        margin: 0 0 20px 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__category:not(:last-child) {
+        margin: 0 0 60px 0;
+    }
+    &__link {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__subtitle {
+        width: 345px;
+        margin: 0 0 36px 0;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: 2px;
+        color: $brand-color;
+    }
+    &__link-city {
+        width: 240px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__link-social {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+    &__link-connect {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: $main-text-dark;
+    }
+}

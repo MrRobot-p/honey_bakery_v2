@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url(../img/main_page/header/astro.jpg);
+    background-size: cover;
+    &__text-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 1142px;
+    }
+    &__leftside {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        width: 388px;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+        color: $main-text-light;
+    }
+    &__subtitle {
+        width: 348px;
+        color: $main-text-light;
+    }
+    &__button {
+        color: $main-text-light;
+    }
+}
