@@ -7,11 +7,14 @@ const requireDir = require("require-dir"),
         views: {
             src: [
                 "./src/views/**/*.html",
+                // "./src/views/**/*.php",
                 "./src/views/pages/*.html"
             ],
             dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.html",
+                // "./src/blocks/**/*.php",
+                // "./src/views/**/*.php",
                 "./src/views/**/*.html"
             ]
         },

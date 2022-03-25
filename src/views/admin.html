@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Админка | Honey Bakery</title>
+    <meta name="theme-color" content="#f0f0f3">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+
+    <!-- SPRITE SVG -->
+
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <symbol id="home" viewBox="0 0 24 24" fill="#333333">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+            </symbol>
+            <symbol  id="mail" viewBox="0 0 24 24" fill="#333333">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+            </symbol>
+            <symbol id="checklist" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                <rect fill="none" height="24" width="24"/>
+                <path d="M22,7h-9v2h9V7z M22,15h-9v2h9V15z M5.54,11L2,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,11z M5.54,19L2,15.46 l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,19z"/>
+            </symbol>
+            <symbol  id="logout" enable-background="new 0 0 24 24"  viewBox="0 0 24 24" >
+                <g><path d="M0,0h24v24H0V0z" fill="none"/></g>
+                <g><path d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z"/></g>
+            </symbol>
+            <symbol id="account" viewBox="0 0 24 24">
+                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </symbol>
+            <symbol  id="plus" viewBox="0 0 24 24"  fill="#333333">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </symbol>
+            <symbol id="close" viewBox="0 0 24 24" fill="#1f1f1f">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </symbol>
+        </svg>
+    </div>
+
+    <header class="admin-header container">
+        <a class="admin-header__logotype" href="../index.html" aria-label="Логотип/Ссылка на главную страницу">
+            <img class="admin-header__logotype-img" src="../img/logo/logo-dark.png" alt="Логотип компании" width="50" height="50">
+            <img class="admin-header__logotype-text" src="../img/logo/logotext-dark.png" alt="Тектовое название компании" width="122" height="20">
+        </a>
+        <div class="admin-header__profile-side">
+            <span class="admin-header__name">Анастасия</span>
+            <img class="admin-header__image" src="../img/admin_page/admins_photo/stasy.png" alt="Фотография администратора" width="40" height="40">
+            <a class="admin-header__add-admin js-add-admin" href="#">
+                <svg class="admin-header__add-admin-svg" width="24" height="24">
+                    <use xlink:href="#plus"></use> 
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <section class="admin-main container">
+        <h2 class="visually-hidden">Админка</h2>
+        <div class="admin-main__controls">
+            <a data-tab="1" class="admin-main__control js-tab-trigger admin-main__control--active">
+                <span class="admin-main__control-img">
+                    <svg class="admin-main__control-svg" width="40" height="40">
+                        <use xlink:href="#home"></use> 
+                    </svg>
+                </span>
+                <span class="admin-main__control-text">
+                    Главная
+                </span>
+            </a>
+            <a data-tab="2" class="admin-main__control js-tab-trigger">
+                <span class="admin-main__control-img">
+                    <svg class="admin-main__control-svg" width="40" height="40">
+                        <use xlink:href="#mail"></use> 
+                    </svg>
+                </span>
+                <span class="admin-main__control-text">
+                    Почта
+                </span>
+            </a>
+            <a data-tab="3" class="admin-main__control js-tab-trigger">
+                <span class="admin-main__control-img">
+                    <svg class="admin-main__control-svg" width="40" height="40">
+                        <use xlink:href="#checklist"></use> 
+                    </svg>
+                </span>
+                <span class="admin-main__control-text">
+                    Заказы
+                </span>
+            </a>
+            <a href="#" id="logout-btn" class="admin-main__control">
+                <span class="admin-main__control-img">
+                    <svg class="admin-main__control-svg" width="40" height="40">
+                        <use xlink:href="#logout"></use> 
+                    </svg>
+                </span>
+                <span class="admin-main__control-text">
+                    Выйти
+                </span>
+            </a>
+        </div>
+        <div class="admin-main__tabs">
+            <section data-tab="1" class="admin-main__tab admin-panel admin-tabs-js active">
+                <div class="admin-panel__inner">
+                    <div class="admin-panel__head">
+                        <div class="admin-panel__head-inner">
+                            <h3 class="admin-panel__head-title">Панель администратора</h3>
+                            <div class="admin-panel__head-currunt-date-time">
+                                <div id="panel-time" class="admin-panel__head-time"></div>
+                                <div id="panel-date" class="admin-panel__head-date"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-panel__content">
+                        <div class="admin-panel__orders">
+                            <div class="admin-panel__orders-head">
+                                <span class="admin-panel__orders-title">Последние заказы</span>
+                                <a href="#" class="admin-panel__orders-link">Все</a>
+                            </div>
+                            <ul class="admin-panel__orders-list">
+                                <li class="admin-panel__orders-item">
+                                    <div class="admin-panel__orders-item-img-block">
+                                        <img class="admin-panel__orders-item-img" src="img/admin_page/orders_photo/4.png" alt="Изображение заказа" width="134" height="178">
+                                        <div class="admin-panel__orders-item-img-shadow"></div>
+                                    </div>
+                                    <div class="admin-panel__orders-item-right">
+                                        <div class="admin-panel__orders-item-head">
+                                            <h4 class="admin-panel__orders-item-title">Алые Магнолии</h4>
+                                            <span class="admin-panel__orders-item-articul">№ 327</span>
+                                        </div>
+                                        <div class="admin-panel__orders-item-center">
+                                            <div class="admin-panel__orders-item-left-side">
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-weight">
+                                                    <span class="admin-panel__orders-item-weight-title admin-panel__orders-item-subtitle">Вес</span>
+                                                    <span class="admin-panel__orders-item-weight-value admin-panel__orders-item-value">15кг</span>
+                                                </p>
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-price">
+                                                    <span class="admin-panel__orders-item-taste-title admin-panel__orders-item-subtitle">Цена</span>
+                                                    <span class="admin-panel__orders-item-taste-value admin-panel__orders-item-value">670 BYN</span>
+                                                </p>
+                                            </div>
+                                            <div class="admin-panel__orders-item-right-side">
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-date">
+                                                    <span class="admin-panel__orders-item-filling-title admin-panel__orders-item-subtitle">Дата</span>
+                                                    <span class="admin-panel__orders-item-filling-value admin-panel__orders-item-value">05.04.2022</span>
+                                                </p>
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-time">
+                                                    <span class="admin-panel__orders-item-filling-title admin-panel__orders-item-subtitle">Время</span>
+                                                    <span class="admin-panel__orders-item-filling-value admin-panel__orders-item-value">18:10</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="admin-panel__orders-item-link">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="admin-panel__orders-item">
+                                    <div class="admin-panel__orders-item-img-block">
+                                        <img class="admin-panel__orders-item-img" src="img/admin_page/orders_photo/3.png" alt="Изображение заказа" width="134" height="178">
+                                        <div class="admin-panel__orders-item-img-shadow"></div>
+                                    </div>
+                                    <div class="admin-panel__orders-item-right">
+                                        <div class="admin-panel__orders-item-head">
+                                            <h4 class="admin-panel__orders-item-title">Черное золото</h4>
+                                            <span class="admin-panel__orders-item-articul">№ 328</span>
+                                        </div>
+
+                                        <div class="admin-panel__orders-item-center">
+                                            <div class="admin-panel__orders-item-left-side">
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-weight">
+                                                    <span class="admin-panel__orders-item-weight-title admin-panel__orders-item-subtitle">Вес</span>
+                                                    <span class="admin-panel__orders-item-weight-value admin-panel__orders-item-value">10кг</span>
+                                                </p>
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-price">
+                                                    <span class="admin-panel__orders-item-taste-title admin-panel__orders-item-subtitle">Цена</span>
+                                                    <span class="admin-panel__orders-item-taste-value admin-panel__orders-item-value">540 BYN</span>
+                                                </p>
+                                            </div>
+                                            <div class="admin-panel__orders-item-right-side">
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-date">
+                                                    <span class="admin-panel__orders-item-filling-title admin-panel__orders-item-subtitle">Дата</span>
+                                                    <span class="admin-panel__orders-item-filling-value admin-panel__orders-item-value">05.04.2022</span>
+                                                </p>
+                                                <p class="admin-panel__orders-item-type admin-panel__orders-item-time">
+                                                    <span class="admin-panel__orders-item-filling-title admin-panel__orders-item-subtitle">Время</span>
+                                                    <span class="admin-panel__orders-item-filling-value admin-panel__orders-item-value">14:40</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="admin-panel__orders-item-link">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="admin-panel__messages">
+                            <div class="admin-panel__messages-head">
+                                <span class="admin-panel__messages-title">Последние вопросы</span>
+                                <a href="#" class="admin-panel__messages-link">Все</a>
+                            </div>
+                            <ul class="admin-panel__messages-list">
+                                <li class="admin-panel__messages-item">
+                                    <svg class="admin-panel__messages-item-svg" width="70" height="70">
+                                        <use xlink:href="#account"></use> 
+                                    </svg>
+                                    <div class="admin-panel__messages-item-main">
+                                        <h4 class="admin-panel__messages-item-title">Анастасия</h4>
+                                        <p class="admin-panel__messages-item-description">Каковы условия доставки в город Щучин?</p>
+                                    </div>
+                                    <a class="admin-panel__messages-item-email" href="mailto:youwaytosuccess@gmail.com">
+                                        <svg class="admin-panel__messages-item-email-svg" width="28" height="22">
+                                            <use xlink:href="#mail"></use> 
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="admin-panel__messages-item">
+                                    <svg class="admin-panel__messages-item-svg" width="70" height="70">
+                                        <use xlink:href="#account"></use> 
+                                    </svg>
+                                    <div class="admin-panel__messages-item-main">
+                                        <h4 class="admin-panel__messages-item-title">Павел Реботский</h4>
+                                        <p class="admin-panel__messages-item-description">Организовываете ли вы масштабные праздники? Количество гостей 50-60</p>
+                                    </div>
+                                    <a class="admin-panel__messages-item-email" href="mailto:youwaytosuccess@gmail.com">
+                                        <svg class="admin-panel__messages-item-email-svg" width="28" height="22">
+                                            <use xlink:href="#mail"></use> 
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-tab="2" class="admin-main__tab admin-messages admin-tabs-js">
+                <div class="admin-messages__inner">
+                    <div class="admin-messages__head">
+                        <div class="admin-messages__head-inner">
+                            <h3 class="admin-messages__head-title">Вопросы пользователей</h3>
+                            <div class="admin-messages__head-currunt-date-time">
+                                <div id="messages-time" class="admin-messages__head-time"></div>
+                                <div id="messages-date" class="admin-messages__head-date"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="admin-messages__content">
+                        <div class="admin-messages__block">
+                            <div class="admin-messages__block-head">
+                                <span class="admin-messages__block-title">Последние вопросы</span>
+                                <a href="#" class="admin-messages__block-link">Очистить все</a>
+                            </div>
+                            <ul class="admin-messages__block-list">
+                                <li class="admin-messages__block-item">
+                                    <svg class="admin-messages__block-item-svg" width="70" height="70">
+                                    <use xlink:href="#account"></use> 
+                                </svg>
+                                    <div class="admin-messages__block-item-main">
+                                        <h4 class="admin-messages__block-item-title">Анастасия</h4>
+                                        <p class="admin-messages__block-item-description">Каковы условия доставки в город Щучин?</p>
+                                    </div>
+                                    <a class="admin-messages__block-item-email" href="mailto:youwaytosuccess@gmail.com">
+                                        <svg class="admin-messages__messages-item-email-svg" width="28" height="22">
+                                        <use xlink:href="#mail"></use> 
+                                    </svg>
+                                    </a>
+                                </li>
+
+                                <li class="admin-messages__block-item">
+                                    <svg class="admin-messages__block-item-svg" width="70" height="70">
+                                    <use xlink:href="#account"></use> 
+                                </svg>
+                                    <div class="admin-messages__block-item-main">
+                                        <h4 class="admin-messages__block-item-title">Павел Реботский</h4>
+                                        <p class="admin-messages__block-item-description">Организовываете ли вы масштабные праздники? Количество гостей 50-60</p>
+                                    </div>
+                                    <a class="admin-messages__block-item-email" href="mailto:youwaytosuccess@gmail.com">
+                                        <svg class="admin-messages__messages-item-email-svg" width="28" height="22">
+                                        <use xlink:href="#mail"></use> 
+                                    </svg>
+                                    </a>
+                                </li>
+
+                                <li class="admin-messages__block-item">
+                                    <svg class="admin-messages__block-item-svg" width="70" height="70">
+                                    <use xlink:href="#account"></use> 
+                                </svg>
+                                    <div class="admin-messages__block-item-main">
+                                        <h4 class="admin-messages__block-item-title">Александра Яцевич</h4>
+                                        <p class="admin-messages__block-item-description">Организовываете ли вы масштабные праздники? Количество гостей 50-60</p>
+                                    </div>
+                                    <a class="admin-messages__block-item-email" href="mailto:youwaytosuccess@gmail.com">
+                                        <svg class="admin-messages__messages-item-email-svg" width="28" height="22">
+                                        <use xlink:href="#mail"></use> 
+                                    </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="admin-messages__contact-form">
+                            <h3 class="admin-messages__contact-form-title">Связаться</h3>
+                            <form class="admin-messages__contact-form-block" name="contact-form" action="https://echo.htmlacademy.ru" method="post">
+                                <p class="admin-messages__form-paragraph">
+                                    <input class="admin-messages__contact-form-input admin-messages__contact-form-email" type="email" name="email-recipient" placeholder="Получатель (E-mail)" required>
+                                </p>
+                                <p class="admin-messages__form-paragraph">
+                                    <textarea class="admin-messages__contact-form-textarea admin-messages__contact-form-name" name="latter-recipient" placeholder="Текстовое сообщение" cols="60" rows="5" required></textarea>
+                                </p>
+                                <button class="admin-messages__contact-form-submit-button" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-tab="3" class="admin-main__tab admin-orders admin-tabs-js">
+                <div class="admin-orders__inner">
+                    <div class="admin-orders__head">
+                        <div class="admin-orders__head-inner">
+                            <h3 class="admin-orders__head-title">Заказы пользователей</h3>
+                            <div class="admin-orders__head-currunt-date-time">
+                                <div id="orders-time" class="admin-orders__head-time"></div>
+                                <div id="orders-date" class="admin-orders__head-date"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="admin-orders__content">
+                        <div class="admin-orders__tabs">
+                            <ul class="admin-orders__tabs-list">
+                                <li class="admin-orders__tabs-item">
+                                    <a data-tab="4" class="admin-orders__tabs-link js-admin-orders-tabs-trigger admin-orders-active">Новые заказы</a>
+                                </li>
+                                <li class="admin-orders__tabs-item">
+                                    <a data-tab="5" class="admin-orders__tabs-link js-admin-orders-tabs-trigger">Принятые заказы</a>
+                                </li>
+                                <li class="admin-orders__tabs-item">
+                                    <a data-tab="6" class="admin-orders__tabs-link js-admin-orders-tabs-trigger">Отмененные заказы</a>
+                                </li>
+                                <li class="admin-orders__tabs-item">
+                                    <a data-tab="7" class="admin-orders__tabs-link js-admin-orders-tabs-trigger">Завершенные</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-tab="4" class="admin-orders__tabs-content new-orders js-admin-order-content active">
+                            <div class="new-orders__inner">
+                                <ul class="new-orders__list">
+                                    <li class="new-orders__item">
+                                        <div class="new-orders__item-top">
+                                            <h4 class="new-orders__item-title">Заказ пользователя</h4>
+                                            <span class="new-orders__item-articul">№ 327</span>
+                                        </div>
+                                        <div class="new-orders__item-product-info">
+                                            <h5 class="new-orders__item-info-title new-orders__item-info-product-title">Алые Магнолии</h5>
+                                            <span class="new-orders__horizontal-line"></span>
+                                            <div class="new-orders__item-product-info-main">
+                                                <div class="new-orders__item-product-info-left">
+                                                    <p class="new-orders__item-product-info-type">
+                                                        <span class="new-orders__item-subtitle">Вес</span>
+                                                        <span class="new-orders__item-value">18 кг</span>
+                                                    </p>
+                                                    <p class="new-orders__item-product-info-type">
+                                                        <span class="new-orders__item-subtitle">Цена</span>
+                                                        <span class="new-orders__item-value">890 BYN</span>
+                                                    </p>
+                                                </div>
+                                                <div class="new-orders__item-product-info-center">
+                                                    <p class="new-orders__item-product-info-type">
+                                                        <span class="new-orders__item-subtitle">Начинка</span>
+                                                        <span class="new-orders__item-value">Вишня</span>
+                                                    </p>
+                                                    <p class="new-orders__item-product-info-type">
+                                                        <span class="new-orders__item-subtitle">Кол-во</span>
+                                                        <span class="new-orders__item-value">1 шт</span>
+                                                    </p>
+                                                </div>
+                                                <div class="new-orders__item-product-info-right">
+                                                    <p class="new-orders__item-product-info-type">
+                                                        <span class="new-orders__item-subtitle">Вкус</span>
+                                                        <span class="new-orders__item-value">Гиннес</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="new-orders_item-customer-info">
+                                            <h5 class="new-orders__item-info-title new-orders__item-info-customer-title">Заказчик</h5>
+                                            <span class="new-orders__horizontal-line"></span>
+                                            <div class="new-orders__item-customer-info">
+                                                <p class="new-orders__item-customer-info-type new-orders__item-customer-info-type">
+                                                    <span class="new-orders__item-customer-subtitle">Имя</span>
+                                                    <span class="new-orders__item-customer-value">Александр Давыдов</span>
+                                                </p>
+                                                <p class="new-orders__item-customer-info-type new-orders__item-customer-info-type">
+                                                    <span class="new-orders__item-customer-subtitle">Телефон</span>
+                                                    <span class="new-orders__item-customer-value">+375 (33) 6890899</span>
+                                                </p>
+                                                <p class="new-orders__item-customer-info-type new-orders__item-customer-info-type">
+                                                    <span class="new-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="new-orders__item-customer-value">alexander-grodfo@gmail.com</span>
+                                                </p>
+                                                <p class="new-orders__item-customer-info-type new-orders__item-customer-info-type">
+                                                    <span class="new-orders__item-customer-subtitle">Доставка</span>
+                                                    <span class="new-orders__item-customer-value">Курьером</span>
+                                                </p>
+                                                <p class="new-orders__item-customer-info-type new-orders__item-customer-info-type">
+                                                    <span class="new-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="new-orders__item-customer-value">Ул. Доватора 38Б, дом 12, квартира 56</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="new-orders__item-controlers">
+                                            <a href="#" class="new-orders__item-controlers-accept">Принять</a>
+                                            <a href="#" class="new-orders__item-controlers-cancel">Отменить</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-tab="5" class="admin-orders__tabs-content accepted-orders js-admin-order-content">
+                            <div class="accepted-orders__inner">
+                                <ul class="accepted-orders__list">
+                                    <li class="accepted-orders__item">
+                                        <div class="accepted-orders__item-top">
+                                            <h4 class="accepted-orders__item-title">Заказ пользователя</h4>
+                                            <span class="accepted-orders__item-articul">№ 327</span>
+                                        </div>
+                                        <div class="accepted-orders__item-product-info">
+                                            <h5 class="accepted-orders__item-info-title accepted-orders__item-info-product-title">Алые Магнолии</h5>
+                                            <span class="accepted-orders__horizontal-line"></span>
+                                            <div class="accepted-orders__item-product-info-main">
+                                                <div class="accepted-orders__item-product-info-left">
+                                                    <p class="accepted-orders__item-product-info-type">
+                                                        <span class="accepted-orders__item-subtitle">Вес</span>
+                                                        <span class="accepted-orders__item-value">18 кг</span>
+                                                    </p>
+                                                    <p class="accepted-orders__item-product-info-type">
+                                                        <span class="accepted-orders__item-subtitle">Цена</span>
+                                                        <span class="accepted-orders__item-value">890 BYN</span>
+                                                    </p>
+                                                </div>
+                                                <div class="accepted-orders__item-product-info-center">
+                                                    <p class="accepted-orders__item-product-info-type">
+                                                        <span class="accepted-orders__item-subtitle">Начинка</span>
+                                                        <span class="accepted-orders__item-value">Вишня</span>
+                                                    </p>
+                                                    <p class="accepted-orders__item-product-info-type">
+                                                        <span class="accepted-orders__item-subtitle">Кол-во</span>
+                                                        <span class="accepted-orders__item-value">1 шт</span>
+                                                    </p>
+                                                </div>
+                                                <div class="accepted-orders__item-product-info-right">
+                                                    <p class="accepted-orders__item-product-info-type">
+                                                        <span class="accepted-orders__item-subtitle">Вкус</span>
+                                                        <span class="accepted-orders__item-value">Гиннес</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accepted-orders_item-customer-info">
+                                            <h5 class="accepted-orders__item-info-title accepted-orders__item-info-customer-title">Заказчик</h5>
+                                            <span class="accepted-orders__horizontal-line"></span>
+                                            <div class="accepted-orders__item-customer-info">
+                                                <p class="accepted-orders__item-customer-info-type">
+                                                    <span class="accepted-orders__item-customer-subtitle">Имя</span>
+                                                    <span class="accepted-orders__item-customer-value">Александр Давыдов</span>
+                                                </p>
+                                                <p class="accepted-orders__item-customer-info-type">
+                                                    <span class="accepted-orders__item-customer-subtitle">Телефон</span>
+                                                    <span class="accepted-orders__item-customer-value">+375 (33) 6890899</span>
+                                                </p>
+                                                <p class="accepted-orders__item-customer-info-type">
+                                                    <span class="accepted-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="accepted-orders__item-customer-value">alexander-grodfo@gmail.com</span>
+                                                </p>
+                                                <p class="accepted-orders__item-customer-info-type">
+                                                    <span class="accepted-orders__item-customer-subtitle">Доставка</span>
+                                                    <span class="accepted-orders__item-customer-value">Курьером</span>
+                                                </p>
+                                                <p class="accepted-orders__item-customer-info-type">
+                                                    <span class="accepted-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="accepted-orders__item-customer-value">Ул. Доватора 38Б, дом 12, квартира 56</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="accepted-orders__item-controlers">
+                                            <a href="#" class="accepted-orders__item-controlers-end">Завершить</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-tab="6" class="admin-orders__tabs-content canceled-orders js-admin-order-content">
+                            <div class="canceled-orders__inner">
+                                <ul class="canceled-orders__list">
+                                    <li class="canceled-orders__item">
+                                        <div class="canceled-orders__item-top">
+                                            <h4 class="canceled-orders__item-title">Заказ пользователя</h4>
+                                            <span class="canceled-orders__item-articul">№ 327</span>
+                                        </div>
+                                        <div class="canceled-orders__item-product-info">
+                                            <h5 class="canceled-orders__item-info-title canceled-orders__item-info-product-title">Алые Магнолии</h5>
+                                            <span class="canceled-orders__horizontal-line"></span>
+                                            <div class="canceled-orders__item-product-info-main">
+                                                <div class="canceled-orders__item-product-info-left">
+                                                    <p class="canceled-orders__item-product-info-type">
+                                                        <span class="canceled-orders__item-subtitle">Вес</span>
+                                                        <span class="canceled-orders__item-value">18 кг</span>
+                                                    </p>
+                                                    <p class="canceled-orders__item-product-info-type">
+                                                        <span class="canceled-orders__item-subtitle">Цена</span>
+                                                        <span class="canceled-orders__item-value">890 BYN</span>
+                                                    </p>
+                                                </div>
+                                                <div class="canceled-orders__item-product-info-center">
+                                                    <p class="canceled-orders__item-product-info-type">
+                                                        <span class="canceled-orders__item-subtitle">Начинка</span>
+                                                        <span class="canceled-orders__item-value">Вишня</span>
+                                                    </p>
+                                                    <p class="canceled-orders__item-product-info-type">
+                                                        <span class="canceled-orders__item-subtitle">Кол-во</span>
+                                                        <span class="canceled-orders__item-value">1 шт</span>
+                                                    </p>
+                                                </div>
+                                                <div class="canceled-orders__item-product-info-right">
+                                                    <p class="canceled-orders__item-product-info-type">
+                                                        <span class="canceled-orders__item-subtitle">Вкус</span>
+                                                        <span class="canceled-orders__item-value">Гиннес</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="canceled-orders_item-customer-info">
+                                            <h5 class="canceled-orders__item-info-title canceled-orders__item-info-customer-title">Заказчик</h5>
+                                            <span class="canceled-orders__horizontal-line"></span>
+                                            <div class="canceled-orders__item-customer-info">
+                                                <p class="canceled-orders__item-customer-info-type">
+                                                    <span class="canceled-orders__item-customer-subtitle">Имя</span>
+                                                    <span class="canceled-orders__item-customer-value">Александр Давыдов</span>
+                                                </p>
+                                                <p class="canceled-orders__item-customer-info-type">
+                                                    <span class="canceled-orders__item-customer-subtitle">Телефон</span>
+                                                    <span class="canceled-orders__item-customer-value">+375 (33) 6890899</span>
+                                                </p>
+                                                <p class="canceled-orders__item-customer-info-type">
+                                                    <span class="canceled-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="canceled-orders__item-customer-value">alexander-grodfo@gmail.com</span>
+                                                </p>
+                                                <p class="canceled-orders__item-customer-info-type">
+                                                    <span class="canceled-orders__item-customer-subtitle">Доставка</span>
+                                                    <span class="canceled-orders__item-customer-value">Курьером</span>
+                                                </p>
+                                                <p class="canceled-orders__item-customer-info-type">
+                                                    <span class="canceled-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="canceled-orders__item-customer-value">Ул. Доватора 38Б, дом 12, квартира 56</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="canceled-orders__item-controlers">
+                                            <a href="#" class="canceled-orders__item-controlers-delete">Удалить</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-tab="7" class="admin-orders__tabs-content completed-orders js-admin-order-content">
+                            <div class="completed-orders__inner">
+                                <ul class="completed-orders__list">
+                                    <li class="completed-orders__item">
+                                        <div class="completed-orders__item-top">
+                                            <h4 class="completed-orders__item-title">Заказ пользователя</h4>
+                                            <span class="completed-orders__item-articul">№ 327</span>
+                                        </div>
+                                        <div class="completed-orders__item-product-info">
+                                            <h5 class="completed-orders__item-info-title completed-orders__item-info-product-title">Алые Магнолии</h5>
+                                            <span class="completed-orders__horizontal-line"></span>
+                                            <div class="completed-orders__item-product-info-main">
+                                                <div class="completed-orders__item-product-info-left">
+                                                    <p class="completed-orders__item-product-info-type">
+                                                        <span class="completed-orders__item-subtitle">Вес</span>
+                                                        <span class="completed-orders__item-value">18 кг</span>
+                                                    </p>
+                                                    <p class="completed-orders__item-product-info-type">
+                                                        <span class="completed-orders__item-subtitle">Цена</span>
+                                                        <span class="completed-orders__item-value">890 BYN</span>
+                                                    </p>
+                                                </div>
+                                                <div class="completed-orders__item-product-info-center">
+                                                    <p class="completed-orders__item-product-info-type">
+                                                        <span class="completed-orders__item-subtitle">Начинка</span>
+                                                        <span class="completed-orders__item-value">Вишня</span>
+                                                    </p>
+                                                    <p class="completed-orders__item-product-info-type">
+                                                        <span class="completed-orders__item-subtitle">Кол-во</span>
+                                                        <span class="completed-orders__item-value">1 шт</span>
+                                                    </p>
+                                                </div>
+                                                <div class="completed-orders__item-product-info-right">
+                                                    <p class="completed-orders__item-product-info-type">
+                                                        <span class="completed-orders__item-subtitle">Вкус</span>
+                                                        <span class="completed-orders__item-value">Гиннес</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="completed-orders_item-customer-info">
+                                            <h5 class="completed-orders__item-info-title completed-orders__item-info-customer-title">Заказчик</h5>
+                                            <span class="completed-orders__horizontal-line"></span>
+                                            <div class="completed-orders__item-customer-info">
+                                                <p class="completed-orders__item-customer-info-type">
+                                                    <span class="completed-orders__item-customer-subtitle">Имя</span>
+                                                    <span class="completed-orders__item-customer-value">Александр Давыдов</span>
+                                                </p>
+                                                <p class="completed-orders__item-customer-info-type">
+                                                    <span class="completed-orders__item-customer-subtitle">Телефон</span>
+                                                    <span class="completed-orders__item-customer-value">+375 (33) 6890899</span>
+                                                </p>
+                                                <p class="completed-orders__item-customer-info-type">
+                                                    <span class="completed-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="completed-orders__item-customer-value">alexander-grodfo@gmail.com</span>
+                                                </p>
+                                                <p class="completed-orders__item-customer-info-type">
+                                                    <span class="completed-orders__item-customer-subtitle">Доставка</span>
+                                                    <span class="completed-orders__item-customer-value">Курьером</span>
+                                                </p>
+                                                <p class="completed-orders__item-customer-info-type">
+                                                    <span class="completed-orders__item-customer-subtitle">E-mail</span>
+                                                    <span class="completed-orders__item-customer-value">Ул. Доватора 38Б, дом 12, квартира 56</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="completed-orders__item-controlers">
+                                            <a href="#" class="completed-orders__item-controlers-delete">Удалить</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- add-admin -->
+
+    <section class="add-admin-modal">
+        <div class="add-admin-modal__inner">
+            <h3 class="add-admin-modal__title">Добавить администратора</h3>
+            <form class="add-admin-modal__form add-admin-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="add-admin-form__userdata-name add-admin-form__userdata-box">
+                    <input type="text" name="admin-name" id="admin-name" autocomplite="off" placeholder=" " required>
+                    <label for="admin-name">Имя</label>
+                </p>
+                <p class="add-admin-form__userdata-email add-admin-form__userdata-box">
+                    <input type="email" name="admin-email" id="admin-email" autocomplite="off" placeholder="your-email@gmail.com" required>
+                    <label for="admin-email">E-mail</label>
+                </p>
+                <p class="add-admin-form__userdata-password add-admin-form__userdata-box">
+                    <input type="password" name="admin-password" id="admin-password" autocomplete="off" placeholder=" " required>
+                    <label for="admin-password">Пароль</label>
+                    <button href="#" class="password-control" onclick="return show_hide_password(this);"></button>
+                    <script>
+                        function show_hide_password(target) {
+                            var input = document.getElementById('admin-password');
+                            if (input.getAttribute('type') == 'password') {
+                                target.classList.add('view');
+                                input.setAttribute('type', 'text');
+                            } else {
+                                target.classList.remove('view');
+                                input.setAttribute('type', 'password');
+                            }
+                            return false;
+                        }
+                    </script>
+                </p>
+                <p class="add-admin-form__userdata-photo-url add-admin-form__userdata-box">
+                    <input type="text" name="admin-photo-url" id="admin-photo-url" autocomplite="off" placeholder="../img/admin_page/admins_photo/stasy.png" required>
+                    <label for="admin-email">Ссылка на фото админа</label>
+                </p>
+                <div class="add-admin-form__control">
+                    <button class="add-admin-form__button-submit" type="submit">Добавить <svg class="add-admin-form__button-svg" width="18" height="12" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 -6.11959e-07L11.59 1.41L16.17 6L6.99382e-07 6L5.24537e-07 8L16.17 8L11.58 12.59L13 14L20 7L13 -6.11959e-07Z" fill="#f0f0f3"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <button class="add-admin-modal__close" type="button" aria-label="Закрыть">
+                <svg class="add-admin-modal__close-svg" width="36" height="36">
+                    <use xlink:href="#close"></use> 
+                </svg>
+            </button>
+        </div>
+    </section>
+    <div class="overlay"></div>
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        window.jQuery = window.$ = jQuery;
+
+        $(document).ready(function() {
+            console.log("jQuery is loaded");
+        });
+    </script>
+    <script>
+        $('.js-tab-trigger').click(function() {
+            var id = $(this).attr('data-tab'),
+                content = $('.admin-tabs-js[data-tab="' + id + '"]');
+
+            $('.js-tab-trigger.admin-main__control--active').removeClass('admin-main__control--active');
+            $(this).addClass('admin-main__control--active');
+
+            $('.admin-tabs-js.active').removeClass('active');
+            content.addClass('active');
+        });
+    </script>
+    <script>
+        $('.js-admin-orders-tabs-trigger').click(function() {
+            var id = $(this).attr('data-tab'),
+                content = $('.js-admin-order-content[data-tab="' + id + '"]');
+
+            $('.js-admin-orders-tabs-trigger.admin-orders-active').removeClass('admin-orders-active');
+            $(this).addClass('admin-orders-active');
+
+            $('.js-admin-order-content.active').removeClass('active');
+            content.addClass('active');
+        });
+    </script>
+</body>
+
+</html>
