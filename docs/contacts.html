@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Контакты | Honey Bakery</title>
+    <meta name="theme-color" content="#f0f0f3">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+</head>
+
+<body>
+
+
+    <!-- SPRITE SVG -->
+
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol  id="cart" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </symbol>
+            <symbol id="account"  viewBox="0 0 24 24">
+                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </symbol>
+        </svg>
+    </div>
+
+    <!-- navigation-dark -->
+
+<nav class="navigation-dark container">
+    <a class="navigation-dark__logotype" href="../index.html" aria-label="Логотип/Ссылка на главную страницу">
+        <img class="navigation-dark__logotype-img" src="../img/logo/logo-dark.png" alt="Логотип компании" width="50" height="50">
+        <img class="navigation-dark__logotype-text" src="../img/logo/logotext-dark.png" alt="Тектовое название компании" width="122" height="20">
+    </a>
+    <ul class="navigation-dark__menu">
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../index.html">Главная</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="#">Торт на заказ</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../catalog.html">Каталог</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../contacts.html">Контакты</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../about.html">О нас</a></li>
+        <li class="navigation-dark__menu-item">
+            <a class="navigation-dark__menu-link" href="../profile.html">
+                <svg class="navigation-dark__menu-account" width="20" height="20">
+                    <use xlink:href="#account"></use> 
+                </svg>
+            </a>
+        </li>
+        <li class="navigation-dark__menu-item">
+            <a class="navigation-dark__menu-link" href="../cart_authorized.html">
+                <svg class="navigation-dark__menu-cart" width="20" height="20">
+                    <use xlink:href="#cart"></use> 
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <section class="contacts container">
+        <div class="contacts__left-side">
+            <h2 class="contacts__title">Ответим на любые вопросы!</h2>
+            <p class="contacts__information">Мы всегда рады ответить, напишите нам на почту <a class="contacts__link" href="mailto:honey@gmail.com">honey@gmail.com</a> или позвоните по телефону <a class="contacts__link" href="tel:+375336890899">+375(33)68-90-899</a>.</p>
+        </div>
+        <div class="contacts__right-side">
+            <div class="contacts__category contacts__workspaces">
+                <h3 class="contacts__subtitle">Места работы</h3>
+                <p class="contacts__paragraph"><a class="contacts__link-city" href="#">Гродно</a></p>
+                <p class="contacts__paragraph">пр-т Космонавтов, 37Б</p>
+                <p class="contacts__paragraph"><a class="contacts__link-city" href="#">Щучин</a></p>
+                <p class="contacts__paragraph">ул. Западная, дом 12</p>
+            </div>
+            <div class="contacts__category contacts__socials">
+                <h3 class=" contacts__subtitle">Социальные сети</h3>
+                <p class="contacts__paragraph"><a class="contacts__link-social" href="#">Instagram</a></p>
+                <p class="contacts__paragraph"><a class="contacts__link-social" href="#">Вконтакте</a></p>
+            </div>
+            <div class="contacts__category contacts__connect">
+                <h3 class="contacts__connect contacts__subtitle">Сотрудничество</h3>
+                <p class="contacts__paragraph"><a class="contacts__link-connect" href="mailto:youwaytosuccess@gmail.com">Анастасия Мальченко - В любое время</a></p>
+                <p class="contacts__paragraph">Гродно</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/pageС.min.js"></script>
+    <script src="js/vendor.min.js"></script>
+</body>
+
+</html>

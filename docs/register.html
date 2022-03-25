@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Регистрация | Honey Bakery</title>
+    <meta name="theme-color" content="#f0f0f3">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <section class="register-sidebar">
+            <a class="register-sidebar__logo" href="index.html"><img class="register-sidebar__logo-img" src="img/logo/LogoText-light.png" alt="Название компании" width="233" height="36"></a>
+        </section>
+        <section class="register-content">
+            <h2 class="register-content__title">Регистрация</h2>
+            <form class="register-content__form signup-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="signup-form__container">
+                    <div class="signup-form__userdata">
+                        <div class="signup-form__userdata-inicials">
+                            <p class="signup-form__userdata-name signup-form__userdata-box">
+                                <input type="text" name="name" id="user-name" autocomplete="off" placeholder=" " required>
+                                <label for="user-name">Имя</label>
+                            </p>
+                            <p class="signup-form__userdata-surname signup-form__userdata-box">
+                                <input type="text" name="surname" id="user-surname" autocomplete="off" placeholder=" " required>
+                                <label for="user-surname">Фамилия</label>
+                            </p>
+                        </div>
+                        <div class="signup-form__userdata-contacts">
+                            <p class="signup-form__userdata-number signup-form__userdata-box">
+                                <input type="tel" name="number" id="user-number" autocomplete="off" placeholder="+375 (33) 6890899" required pattern='\s{0,}\+{1,1}375\s{0,}\({0,1}(([2]{1}([5]{1}|[9]{1}))|([3]{1}[3]{1})|([4]{1}[4]{1}))\)\s{0,}[0-9]{3,3}\s{0,}[0-9]{4,4}'>
+                                <label for="user-number">Номер телефона</label>
+                            </p>
+                            <p class="signup-form__userdata-email signup-form__userdata-box">
+                                <input type="email" name="email" id="user-email" autocomplete="off" placeholder="your-email@gmail.com" required>
+                                <label for="user-email">E-mail</label>
+                            </p>
+                        </div>
+                        <p class="signup-form__userdata-password signup-form__userdata-box">
+                            <input type="password" name="password" id="user-password" autocomplete="off" placeholder=" " required>
+                            <label for="user-password">Пароль</label>
+                            <button href="#" class="password-control" onclick="return show_hide_password(this);"></button>
+                            <script>
+                                function show_hide_password(target) {
+                                    var input = document.getElementById('user-password');
+                                    if (input.getAttribute('type') == 'password') {
+                                        target.classList.add('view');
+                                        input.setAttribute('type', 'text');
+                                    } else {
+                                        target.classList.remove('view');
+                                        input.setAttribute('type', 'password');
+                                    }
+                                    return false;
+                                }
+                            </script>
+                        </p>
+                        <p class="signup-form__userdata-politic">
+                            <input type="checkbox" class="custom-politic visually-hidden" name="politic" id="politic" checked>
+                            <label for="politic" data-on-label="">Я соглашаюсь с пунктами&nbsp;<a class="signup-form__politic-link" href="#">Политики конфиденциальности</a></label>
+                        </p>
+                    </div>
+
+                    <div class="signup-form__control">
+                        <button class="signup-form__button-submit" type="submit">Отправить <svg class="signup-form__button-svg" width="18" height="12" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 -6.11959e-07L11.59 1.41L16.17 6L6.99382e-07 6L5.24537e-07 8L16.17 8L11.58 12.59L13 14L20 7L13 -6.11959e-07Z" fill="#f0f0f3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <nav class="register-content__nav">
+                <span class="register-content__nav-horizontal-line"></span>
+                <p class="register-content__nav-text">Уже есть аккаунт? <a class="register-content__nav-link" href="login.html">Войти</a></p>
+            </nav>
+        </section>
+    </div>
+
+    <!-- <script src="js/pageС.min.js"></script>
+    <script src="js/vendor.min.js"></script> -->
+</body>
+
+</html>

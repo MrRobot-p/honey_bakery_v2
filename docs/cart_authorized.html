@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Профиль | Honey Bakery</title>
+    <meta name="theme-color" content="#f0f0f3">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+</head>
+
+<body>
+
+
+    <!-- SPRITE SVG -->
+
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol  id="cart" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </symbol>
+            <symbol id="account" viewBox="0 0 24 24">
+                <path  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </symbol>
+            <symbol id="checklist" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                <rect fill="none" height="24" width="24"/>
+                <path d="M22,7h-9v2h9V7z M22,15h-9v2h9V15z M5.54,11L2,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,11z M5.54,19L2,15.46 l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,19z"/>
+            </symbol>
+            <symbol  id="logout" enable-background="new 0 0 24 24"  viewBox="0 0 24 24" >
+                <g><path d="M0,0h24v24H0V0z" fill="none"/></g>
+                <g><path d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z"/></g>
+            </symbol>
+            <symbol id="manage" enable-background="new 0 0 24 24"  viewBox="0 0 24 24">
+                <g><path d="M0,0h24v24H0V0z" fill="none"/></g>
+                <g><g><path d="M4,18v-0.65c0-0.34,0.16-0.66,0.41-0.81C6.1,15.53,8.03,15,10,15c0.03,0,0.05,0,0.08,0.01c0.1-0.7,0.3-1.37,0.59-1.98 C10.45,13.01,10.23,13,10,13c-2.42,0-4.68,0.67-6.61,1.82C2.51,15.34,2,16.32,2,17.35V20h9.26c-0.42-0.6-0.75-1.28-0.97-2H4z"/><path d="M10,12c2.21,0,4-1.79,4-4s-1.79-4-4-4C7.79,4,6,5.79,6,8S7.79,12,10,12z M10,6c1.1,0,2,0.9,2,2s-0.9,2-2,2 c-1.1,0-2-0.9-2-2S8.9,6,10,6z"/><path d="M20.75,16c0-0.22-0.03-0.42-0.06-0.63l1.14-1.01l-1-1.73l-1.45,0.49c-0.32-0.27-0.68-0.48-1.08-0.63L18,11h-2l-0.3,1.49 c-0.4,0.15-0.76,0.36-1.08,0.63l-1.45-0.49l-1,1.73l1.14,1.01c-0.03,0.21-0.06,0.41-0.06,0.63s0.03,0.42,0.06,0.63l-1.14,1.01 l1,1.73l1.45-0.49c0.32,0.27,0.68,0.48,1.08,0.63L16,21h2l0.3-1.49c0.4-0.15,0.76-0.36,1.08-0.63l1.45,0.49l1-1.73l-1.14-1.01 C20.72,16.42,20.75,16.22,20.75,16z M17,18c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S18.1,18,17,18z"/></g></g>
+            </symbol>
+            <symbol id="close" viewBox="0 0 24 24" fill="#1f1f1f">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </symbol>
+        </svg>
+    </div>
+
+    <!-- navigation-dark -->
+
+<nav class="navigation-dark container">
+    <a class="navigation-dark__logotype" href="../index.html" aria-label="Логотип/Ссылка на главную страницу">
+        <img class="navigation-dark__logotype-img" src="../img/logo/logo-dark.png" alt="Логотип компании" width="50" height="50">
+        <img class="navigation-dark__logotype-text" src="../img/logo/logotext-dark.png" alt="Тектовое название компании" width="122" height="20">
+    </a>
+    <ul class="navigation-dark__menu">
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../index.html">Главная</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="#">Торт на заказ</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../catalog.html">Каталог</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../contacts.html">Контакты</a></li>
+        <li class="navigation-dark__menu-item"><a class="navigation-dark__menu-link" href="../about.html">О нас</a></li>
+        <li class="navigation-dark__menu-item">
+            <a class="navigation-dark__menu-link" href="../profile.html">
+                <svg class="navigation-dark__menu-account" width="20" height="20">
+                    <use xlink:href="#account"></use> 
+                </svg>
+            </a>
+        </li>
+        <li class="navigation-dark__menu-item">
+            <a class="navigation-dark__menu-link" href="../cart_authorized.html">
+                <svg class="navigation-dark__menu-cart" width="20" height="20">
+                    <use xlink:href="#cart"></use> 
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <div class="cart container">
+        <section class="cart__commission">
+            <h2 class="cart__commission-title">Оформление заказа</h2>
+            <form class="cart__commission-form" name="form-commission-data" action="https://echo.htmlacademy.ru" method="post">
+                <input type="hidden" value="11" name="id_user-commission">
+                <input type="hidden" value="№347" name="id_product1">
+                <input type="hidden" value="№326" name="id_product2">
+                <p class="cart__commission-paragraph cart__commission-shipping">
+                    <select class="cart__commission-input" name="order-shipping" id="shipping" required>
+                        <option value="" disabled selected>Выберите вариант доставки</option>
+                       <option id="courier" value="Курьером">Доставка курьером</option>  
+                       <option id="pickup" value="Самовывоз">Самовывоз</option>    
+                    </select>
+                </p>
+                <p class="cart__commission-paragraph cart__commission-address">
+                    <input class="cart__commission-input" type="text" name="shipping-address" id="shipping-address" placeholder="Адрес для доставки" value="Ул. Доватора 38Б, дом 12, квартира 56" required>
+                </p>
+                <p class="cart__commission-paragraph cart__commission-date">
+                    <input class="cart__commission-input cart__commission-input-date" type="date" name="shipping-date" id="shipping-date" min="2022-04-01" max="2022-10-20" required>
+                    <input class="cart__commission-input cart__commission-input-time" type="time" name="shipping-time" id="shipping-time" min="09:00" max="21:00" step="600" required>
+                </p>
+                <button class="cart__commission-submit-button" type="submit">Заказать</button>
+            </form>
+        </section>
+        <section class="cart__visuall">
+            <div class="cart__visuall-content-box">
+                <h2 class="cart__visuall-title">Корзина</h2>
+                <ul class="cart__visuall-list">
+                    <li class="cart__visuall-item">
+                        <div class="cart__visuall-item-img-block">
+                            <img class="cart__visuall-item-img" src="img/cart_page/4.jpeg" alt="Изображение заказа" width="134" height="145">
+                            <div class="cart__visuall-item-img-shadow"></div>
+                        </div>
+                        <div class="cart__visuall-item-text">
+                            <h3 class="cart__visuall-item-title">Торт "Темные Магнолии"</h3>
+                            <p class="cart__visuall-item-type cart__visuall-item-weight">
+                                <span class="cart__visuall-item-weight-title cart__visuall-item-subtitle">Вес</span>
+                                <span class="cart__visuall-item-weight-value cart__visuall-item-value">15кг</span>
+                            </p>
+                            <p class="cart__visuall-item-type cart__visual-item-price">
+                                <span class="cart__visuall-item-price-title cart__visuall-item-subtitle">Цена</span>
+                                <span class="cart__visuall-item-price-value cart__visuall-item-value">670 BYN</span>
+                            </p>
+
+                        </div>
+                        <!-- delete.php?id='.$user_data["user_id"].' -->
+                        <a class="cart__visuall-item-delete-button" href="#" alt=" Удалить из корзины">
+                            <svg class="cart__visuall-item-delete-button-svg" width="20" height="20">
+                                <use xlink:href="#close"></use> 
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="cart__visuall-item">
+                        <div class="cart__visuall-item-img-block">
+                            <img class="cart__visuall-item-img" src="img/cart_page/3.jpeg" alt="Изображение заказа" width="134" height="145">
+                            <div class="cart__visuall-item-img-shadow"></div>
+                        </div>
+                        <div class="cart__visuall-item-text">
+                            <h3 class="cart__visuall-item-title">Торт "Темные Магнолии"</h3>
+                            <p class="cart__visuall-item-type cart__visuall-item-weight">
+                                <span class="cart__visuall-item-weight-title cart__visuall-item-subtitle">Вес</span>
+                                <span class="cart__visuall-item-weight-value cart__visuall-item-value">15кг</span>
+                            </p>
+                            <p class="cart__visuall-item-type cart__visual-item-price">
+                                <span class="cart__visuall-item-price-title cart__visuall-item-subtitle">Цена</span>
+                                <span class="cart__visuall-item-price-value cart__visuall-item-value">670 BYN</span>
+                            </p>
+
+                        </div>
+                        <!-- delete.php?id='.$user_data["user_id"].' -->
+                        <a class="cart__visuall-item-delete-button" href="#" alt=" Удалить из корзины">
+                            <svg class="cart__visuall-item-delete-button-svg" width="20" height="20">
+                                <use xlink:href="#close"></use> 
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <span class="cart__visuall-horizontal-line"></span>
+                <div class="cart__visuall-price-results">
+                    <p class="cart__visuall-price-result cart__visuall-shipping-price">
+                        <span class="cart__visuall-price-result-title">Доставка</span>
+                        <span class="cart__visuall-price-result-value">0 BYN</span>
+                    </p>
+                    <p class="cart__visuall-price-result cart__visuall-all-price">
+                        <span class="cart__visuall-price-result-title">Итоговая стоимость</span>
+                        <span class="cart__visuall-price-result-value">1150 BYN</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- FOOTER -->
+
+<footer class="footer container">
+    <div class="footer__wrapper">
+        <ul class="footer__text-content">
+            <li class="footer__item">
+                <a href="../index.html"> <img class="footer__item-img" src="../img/logo/logotext-light.png" alt="Название компании" width="232" height="35"></a>
+            </li>
+            <li class="footer__item">
+                <div class="footer__horizontal-line horizontal-line"></div>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="https://yandex.by/maps/-/CCUu52SVLD">Гродно, пр-т Космонавтов, 37Б</a></li>
+            <li class="footer__item"><a class="footer__link" href="tel:+375336890899">+375(33)68-90-899</a></li>
+            <li class="footer__item"><a class="footer__link" href="mailto:youwaytosuccess@gmail.com">youwaytosuccess@gmail.com</a></li>
+        </ul>
+        <div class="footer__vertical-line"></div>
+        <div class="footer__horizontal-line--mobile"></div>
+        <a class="footer__logotype" href="../index.html"><img class="footer__logotype-img" src="../img/logo/logo-light.png" alt="Логотип компании" width="190" height="190"></a>
+        <div class="footer__horizontal-line--mobile"></div>
+        <div class="footer__vertical-line"></div>
+        <a class="footer__map" href="https://yandex.by/maps/-/CCUu52SVLD"><img class="footer__map-img" src="../img/map/map.png" alt="Карта мира с точкой на городе Гродно" width="380" height="184"></a>
+    </div>
+</footer>
+
+    <!-- 
+    <script src="js/pageС.min.js"></script>
+    <script src="js/vendor.min.js"></script> -->
+</body>
+
+</html>
